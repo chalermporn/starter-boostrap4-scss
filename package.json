@@ -1,0 +1,25 @@
+{
+  "name": "starter-boostrap4-scss",
+  "version": "1.0.0",
+  "description": "Starter Bootstrap 4",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ARAYASOFT/starter-boostrap4-scss.git"
+  },
+  "keywords": [
+    "bootstrap4"
+  ],
+  "author": "Arayasoft.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ARAYASOFT/starter-boostrap4-scss/issues"
+  },
+  "homepage": "https://github.com/ARAYASOFT/starter-boostrap4-scss#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

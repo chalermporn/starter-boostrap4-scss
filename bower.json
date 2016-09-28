@@ -1,0 +1,24 @@
+{
+  "name": "starter-boostrap4-scss",
+  "description": "Starter Bootstrap 4",
+  "main": "index.html",
+  "authors": [
+    "Arayasoft.com"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "bootstrap4"
+  ],
+  "homepage": "https://github.com/ARAYASOFT/starter-boostrap4-scss",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.4"
+  }
+}
