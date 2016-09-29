@@ -4677,7 +4677,8 @@ a.text-danger:focus, a.text-danger:hover {
     display: none !important; } }
 
 h1, .h1 {
-  font-weight: bold; }
+  font-weight: bold;
+  color: red; }
 
 h2, .h2 {
   font-weight: bold; }
