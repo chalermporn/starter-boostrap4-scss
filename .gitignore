@@ -5,13 +5,10 @@ Homestead.yaml
 Homestead.json
 .env
 
-# Resources, assets and compiled files.
-/resources/assets/js
-/resources/assets/css
-/public/build
-/public/css
-/public/js
-/public/fonts
+# public, assets and compiled files.
+/public/assets/css
+/public/assets/js
+/public/assets/fonts
 
 # Numerous always-ignore extensions
 *.diff
