@@ -11,9 +11,9 @@ var rename = require('gulp-rename');
 var browserSync = require('browser-sync').create();
 
 var paths = {
-   bowerDir: './bower_components',
-   public: './public/assets',
-   resource: './resource',
+    bowerDir: './bower_components',
+    public: './public/assets',
+    resource: './resource',
 };
 
 gulp.task('browserSync', function () {
@@ -30,7 +30,7 @@ gulp.task('cssAllMin', function () {
         cssStream;
 
     //compile sass
-    sassStream = gulp.src(paths.resource+'/scss/**/*.scss')
+    sassStream = gulp.src(paths.resource + '/scss/**/*.scss')
 
     .pipe(sass({
         errLogToConsole: true
@@ -43,6 +43,7 @@ gulp.task('cssAllMin', function () {
     return merge(sassStream, cssStream)
         .pipe(order([
             "bootstrap.css",
+            "/bower_components/animate.css/animate.min.css",
             "main.css"
         ]))
         .pipe(concat('all.css'))
@@ -59,9 +60,28 @@ gulp.task('cssAllMin', function () {
     }));
 });
 
+
+gulp.task('jsAllMin', function () {
+
+    return gulp.src([
+            paths.bowerDir + '/jquery/dist/jquery.min.js',
+            paths.bowerDir + '/tether/dist/js/tether.min.js',
+            paths.bowerDir + '/bootstrap/dist/js/bootstrap.min.js',
+            paths.bowerDir + '/jquery.easing/js/jquery.easing.min.js',
+            paths.bowerDir + '/wow/dist/wow.js',
+            paths.resource + '/js/main.js',
+        ])
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest(paths.public + '/js/'))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
+
 gulp.task('watch', ['browserSync', 'cssAllMin'], function () {
-    gulp.watch(paths.resource +'/scss/*.scss', ['cssAllMin']);
-    //gulp.watch('./scss/*.scss', ['styles']);
+    gulp.watch(paths.resource + '/scss/*.scss', ['cssAllMin']);
     gulp.watch('./*.html', browserSync.reload);
+    gulp.watch(paths.resource + '/js/*.js', ['jsAllMin']);
     // Other watchers
 });
