@@ -6,9 +6,9 @@ Homestead.json
 .env
 
 # public, assets and compiled files.
-/public/assets/css
-/public/assets/js
-/public/assets/fonts
+#/public/assets/css
+#/public/assets/js
+#/public/assets/fonts
 
 # Numerous always-ignore extensions
 *.diff
